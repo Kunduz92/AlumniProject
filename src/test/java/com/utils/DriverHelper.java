@@ -5,16 +5,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class DriverHelper {
 
     public static WebDriver driver;
 
-    private DriverHelper(){ } // ->constructor, because I don't want anyone to create an object from this class
-
+    private DriverHelper(){}
 
     public static WebDriver getDriver(){
-        if(driver == null || ((RemoteWebDriver)driver).getSessionId() == null){
+        if (driver==null || ((RemoteWebDriver)driver).getSessionId() == null) {
             switch (ConfigReader.readProperty("browser")){
 
                 case "chrome":
@@ -25,15 +25,18 @@ public class DriverHelper {
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
+                case "safari":
+                    WebDriverManager.safaridriver().setup();
+                    driver = new SafariDriver();
+                    break;
                 default:
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
 
             }
         }
-        return driver;
+
+        return  driver;
     }
-
-
 
 }

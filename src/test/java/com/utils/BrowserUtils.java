@@ -8,12 +8,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Set;
 
-public class BrowserUtil {
+public class BrowserUtils {
 
-    public static void selectBy(WebElement location, String value, String methodName) {
+    public static void selectBy(WebElement location, String value, String methodName){
         Select select = new Select(location);
         switch (methodName) {
-
             case "text":
                 select.selectByVisibleText(value);
                 break;
@@ -26,6 +25,7 @@ public class BrowserUtil {
             default:
                 System.out.println("Method name is not available,Use text,value,or index");
         }
+
     }
 
     public static String getText(WebElement element) {
@@ -74,7 +74,7 @@ public class BrowserUtil {
         }
     }
 
-    public static void getScreenShot(WebDriver driver, String packageName) {
+    public static void getScreenShot(WebDriver driver,String packageName) {
 
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String location = System.getProperty("user.dir") + "/src/java/screenshot" + packageName;
@@ -85,4 +85,5 @@ public class BrowserUtil {
             throw new RuntimeException(e);
         }
     }
+
 }

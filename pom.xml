@@ -15,49 +15,45 @@
 
     <dependencies>
 
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.7.2</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-gherkin-messages</artifactId>
-            <version>7.2.3</version>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.5</version>
         </dependency>
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>4.4.0</version>
-        </dependency>
-
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.3.0</version>
+            <version>5.2.3</version>
         </dependency>
 
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
         <dependency>
-            <groupId>org.openqa.selenium.grid</groupId>
-            <artifactId>selenium-grid-remote-control</artifactId>
-            <version>1.0.2</version>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.11.1</version>
         </dependency>
 
-
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
         <dependency>
-            <groupId>com.oracle.database.jdbc</groupId>
-            <artifactId>ojdbc6</artifactId>
-            <version>11.2.0.4</version>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.11.1</version>
         </dependency>
+
+
+
+
 
 
 
