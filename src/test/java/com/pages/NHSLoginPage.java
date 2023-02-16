@@ -32,6 +32,13 @@ public class NHSLoginPage {
         signInBtn.click();
     }
 
+    public void negativeLogin(String username, String passWord){
+        userName.sendKeys(username);
+        password.sendKeys(passWord);
+
+    }
+
+
 
 
 
