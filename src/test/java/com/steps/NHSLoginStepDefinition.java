@@ -34,7 +34,12 @@ public class NHSLoginStepDefinition {
         nhsHomePage.verifyTitleOfThePage(driver, "NHS patients");
     }
 
-    @When("User enters username and invalid password")
+    @Then("User verifies the title is NHS Patient")
+    public void user_verifies_the_title_is_nhs_patient() {
+        nhsLoginPage.verifyTitle("NHS Patients");
+    }
+
+        @When("User enters username and invalid password")
     public void user_enters_username_and_invalid_password() throws InterruptedException {
         nhsLoginPage.enterUsernamePassword(ConfigReader.readProperty("QA_username"), ConfigReader.readProperty("QA_invalidPassword"));
     }

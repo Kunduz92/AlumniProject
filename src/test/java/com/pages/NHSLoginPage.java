@@ -23,6 +23,9 @@ public class NHSLoginPage {
     @FindBy(xpath = "//button[contains(text(),'Sign in')]")
     WebElement signInBtn;
 
+    @FindBy(xpath = "//title[contains(text(),'NHS patients')]")
+    WebElement title;
+
     public void enterUsernamePassword(String username, String passWord) throws InterruptedException {
         userName.sendKeys(username);
         password.sendKeys(passWord);
@@ -30,6 +33,12 @@ public class NHSLoginPage {
 
     public void successSignIn(){
         signInBtn.click();
+    }
+
+    public void verifyTitle(String actualTitle){
+        Assert.assertEquals(title.getText(), actualTitle);
+
+
     }
 
     public void negativeLogin(String username, String passWord){
